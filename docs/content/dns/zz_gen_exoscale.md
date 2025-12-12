@@ -63,7 +63,7 @@ More information [here]({{% ref "dns#configuration-and-credentials" %}}).
 
 ## More information
 
-- [API documentation](https://openapi-v2.exoscale.com/#endpoint-dns)
+- [API documentation](https://community.exoscale.com/reference/api/dns/)
 - [Go client](https://github.com/exoscale/egoscale)
 
 <!-- THIS DOCUMENTATION IS AUTO-GENERATED. PLEASE DO NOT EDIT. -->
