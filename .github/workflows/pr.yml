@@ -21,11 +21,11 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-go@v6
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
         with:
           go-version: ${{ env.GO_VERSION }}
 
@@ -38,7 +38,7 @@ jobs:
           make generate-dns
           git diff --exit-code
 
-      - uses: golangci/golangci-lint-action@v9
+      - uses: golangci/golangci-lint-action@ba0d7d2ec06a0ea1cb5fa41b2e4a3ab91d21278a # v9.3.0
         with:
           version: ${{ env.GOLANGCI_LINT_VERSION }}
           install-only: true
@@ -50,7 +50,7 @@ jobs:
         run: go install github.com/letsencrypt/pebble/v2/cmd/pebble-challtestsrv@v2.8.0
 
       - name: Set up a Memcached server
-        uses: niden/actions-memcached@v7
+        uses: niden/actions-memcached@9ff2b102979272958682d09bf262563039bea69c # v8
 
       - name: Make
         run: |
